@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light">
     
     <title>Adox Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -60,45 +61,83 @@
    <!-- Nav plus banner -->
     <div class=" w-full" style="background-image: url('Contents for Developer/Extras/Red\ Gradient.jpg');background-size: cover; background-repeat: no-repeat;" >
        <!-- Navigation Bar -->
-      <nav class="text-white py-6 px-52 lg:block hidden font-archivo font-medium mx-auto sticky top-0 z-[1000] ">
-        <div class="container mx-auto flex justify-around">
-          <ul class="flex space-x-28 items-center">
+       <nav class="text-white py-6 lg:px-52 font-archivo font-medium mx-auto sticky top-0 z-[1000]">
+        <div class="container mx-auto flex justify-around lg:justify-around items-center">
+          <!-- Logo / Studio Name (always visible) -->
+          <a href="#" class="lg:hidden text-2xl font-clash font-light">
+            <span class="font-semibold text-center ">ADOX</span> STUDIO
+          </a>
+      
+          <!-- Hamburger Menu Button (only visible on mobile) -->
+          <button id="menuToggle" class="lg:hidden focus:outline-none flex ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+      
+          <!-- Desktop Navigation (visible on larger screens) -->
+          <ul class="hidden lg:flex space-x-28 items-center">
             <li>
-              <a
-                href="#"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >Home</a
-              >
+              <a href="#" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Home</a>
             </li>
             <li>
-              <a
-                href="portfolio.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >Portfolio</a
-              >
+              <a href="portfolio.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Portfolio</a>
             </li>
             <li class="transition hover:-translate-y-2 duration-500">
-              <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light"
-                ><span class="font-semibold">ADOX</span> STUDIO</a
-              >
+              <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light">
+                <span class="font-semibold">ADOX</span> STUDIO
+              </a>
             </li>
             <li>
-              <a
-                href="powerhouse.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >Powerhouse</a
-              >
+              <a href="powerhouse.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Powerhouse</a>
             </li>
             <li>
-              <a
-                href="about.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >About</a
-              >
+              <a href="about.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">About</a>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Mobile Menu (only visible on mobile) -->
+        <div id="mobileMenu" class="hidden lg:hidden  w-full">
+          <ul class="flex flex-col space-y-6 items-center py-4">
+            <li>
+              <a href="#" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Home</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Portfolio</a>
+            </li>
+            <li>
+              <a href="powerhouse.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Powerhouse</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">About</a>
             </li>
           </ul>
         </div>
       </nav>
+      
+      <script>
+        // JavaScript to toggle mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+      
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+      
+      
 
       <!-- main -->
       
@@ -126,13 +165,14 @@
 
         <!-- Guy with the laptop image -->
         <div class="relative">
-          <img src="Contents for Developer/Extras/Guy.png" alt="" class="mx-auto w-[45%] min-h-[full]">
+          <img src="Contents for Developer/Extras/Guy.png" alt="" class="mx-auto w-[45%] h-[100%] ">
+          
         
         
         <!-- Positioned images -->
          <!-- duration-[1000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 delay-[1200ms] -->
-        <div class=" ">
-          <img src="Contents for Developer/Extras/185x36/Graphic-designer.png" alt="" class="absolute top-0 left-0 lg: lg:translate-x-[320px] translate-y-[120px] translate-x-[120px]  -rotate-12 hover:translate-y-[105px] duration-500 w-24 lg:w-auto">
+        <div class="lg:block hidden">
+          <img src="Contents for Developer/Extras/185x36/Graphic-designer.png" alt="" class="absolute top-0 left-0 translate-x-[320px] translate-y-[120px]  -rotate-12 hover:translate-y-[105px] duration-500 w-24 lg:w-auto">
           <img src="Contents for Developer/Extras/185x36/Production-designer.png" alt="" class="absolute top-0 right-0 lg:-translate-x-[320px] translate-y-[120px] -translate-x-[120px] hover:translate-y-[105px] duration-500 w-24 lg:w-auto">
           <img src="Contents for Developer/Extras/185x36/Content-creator.png" alt="" class="absolute bottom-0 left-0 lg:-translate-y-[170px] lg:translate-x-[340px] translate-y-[80px] translate-x-[140px] hover:-translate-y-[185px] duration-500 rotate-3  w-24 lg:w-auto">
           <img src="Contents for Developer/Extras/185x36/Video-editor.png" alt="" class="absolute bottom-0 right-0 lg:-translate-y-[150px] lg:-translate-x-[340px] translate-y-[60px] -translate-x-[140px] hover:-translate-y-[165px] duration-500 -rotate-6 w-24 lg:w-auto">
@@ -141,17 +181,18 @@
       
         <!-- Rack images -->
         <div class="relative">
-          <img src="Contents for Developer/Extras/Rack.png" alt="" class="absolute -top-[450px] left-[50px] opacity-40 duration-[4000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 mix-blend-soft-light lg:-rotate-[30deg] -rotate-[20deg] w-32 lg:w-auto">
+          <img src="Contents for Developer/Extras/Rack.png" alt="" class="absolute lg:-top-[450px] lg:left-[50px] opacity-40 duration-[4000ms] left-[30px] -top-[250px] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 mix-blend-soft-light lg:-rotate-[30deg] -rotate-[20deg] w-32 lg:w-auto">
           <img src="Contents for Developer/Extras/Rack.png" alt="" class="absolute lg:right-[100px] lg:-top-[650px] right-[30px] -top-[150px] opacity-40 rotate-12 duration-[4000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 mix-blend-soft-light w-32 lg:w-auto">
           <img src="Contents for Developer/Extras/Rack.png" alt="" class="absolute lg:right-[70px] lg:-top-[150px] right-[30px] -bottom-[300px] opacity-40 rotate-45 duration-[4000ms] ease-[cubic-bezier(.47,0,.745,.715)] mix-blend-soft-light taos:opacity-0  w-32 lg:w-auto">
         </div>
+      
       </section>
       
     
     </div>
 
     <!-- Clients section -->
-    <section class="bg-black py-14 px-10 lg:px-52">
+    <section class="bg-black lg:py-14 px-10 lg:px-52 pt-14">
       <div class="container mx-auto">
         <h1 class="lg:text-3xl text-2xl text-center font-semibold">Clients</h1>
         <div class="flex md:flex-row flex-col ">
@@ -173,7 +214,7 @@
     </section>
 
     <!-- Dude Behind the Magix Section -->
-    <section class="bg-black py-14 lg:px-52 px-10 animate-fade animate-duration-[3000ms] animate-delay-300">
+    <section class="bg-black pt-14 lg:px-52 px-10 animate-fade animate-duration-[3000ms] animate-delay-300">
       <div
         class="container mx-auto text-center md:text-left flex flex-col-reverse md:flex-row items-center"
       >
@@ -224,7 +265,7 @@
     </section>
 
     <!-- Progress Section -->
-    <section class="bg-black py-14 lg:px-52 px-10">
+    <section class="bg-black py-10 lg:px-52 px-10">
       <div class="container mx-auto text-center">
         <h2 class="lg:text-3xl text-2xl font-semibold mb-8">Progress</h2>
         <div class="grid grid-cols-3 gap-8">
@@ -246,20 +287,23 @@
 
     <!-- Ultra Magix Strength Section -->
     <section
-      class="py-16 lg:px-52 px-10 bg-black mx-auto"
+      class="py-8 lg:px-52  bg-black mx-auto"
       
     >
-      <div class="container mx-auto text-center flex lg:flex-row flex-col ">
+      <div class="container mx-auto text-center flex lg:flex-row flex-col items-center">
         
         <!-- text section -->
         <div class="w-[40%]">
           <h2 class="lg:text-7xl text-2xl lg:text-start justify-center  font-semibold  mb-8 lg:block flex gap-x-1 duration-[1000ms] taos:opacity-0 delay-300 font-clash">
-            <span class="inline-block bg-gradient-to-r from-[#AF0000] from-40%  to-white bg-clip-text  text-transparent mb-4">ULTRA</span> <br /><span class="inline-block bg-gradient-to-r from-[#AF0000] from-40%  to-white bg-clip-text  text-transparent mb-4">MAGIX</span><br />
-            <span class="inline-block bg-gradient-to-r from-[#AF0000] from-20% to-white to-[75%] bg-clip-text  text-transparent">STRENGTH</span>
+            
+            <span class="inline-block bg-gradient-to-r from-[#AF0000] from-40%  to-white bg-clip-text  lg:text-transparent mb-4">ULTRA</span> <br /><span class="inline-block bg-gradient-to-r from-[#AF0000] from-40%  to-white bg-clip-text  lg:text-transparent mb-4">MAGIX</span><br />
+            <span class="inline-block bg-gradient-to-r from-[#AF0000] from-20% to-white to-[75%] bg-clip-text  lg:text-transparent">STRENGTH</
+          </span>
           </h2>
+          <!-- <h2 class="inline-block bg-gradient-to-r from-[#AF0000] from-40%  to-white bg-clip-text  text-transparent lg:hidden text-2xl font-semibold font-clash text-center">ULTRA MAGIX STRENGTH</h2> -->
         </div>
 
-        <div class="flex mx-auto justify-end lg:gap-6 gap-4 mb-12 lg:ml-7 w-[60%]">
+        <div class="flex mx-auto lg:justify-end lg:gap-6 gap-4 mb-12 lg:ml-7 w-[60%] justify-center ">
 
         <!-- Div-1 -->
         <div class="bg-gradient-to-b from-[#AF0000]  to-white p-[1px] rounded-2xl duration-[1500ms] taos:opacity-0 delay-700 hover:-translate-y-7 hover:delay-0 hover:duration-300 " >
@@ -309,115 +353,116 @@
 
     <!-- Testimonial section -->
     <section
-      class="bg-black pb-20 delay-700 duration-[1000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 hidden lg:block px-80" 
+  class="bg-black pb-20 delay-700 duration-[1000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 lg:block lg:px-80 px-12"
+>
+  <h3 class="text-3xl font-bold mb-12 text-center">Testimonials</h3>
+  <div
+    class="relative container bg-black text-white lg:px-24 lg:py-8 py-6 px-6 rounded-3xl mx-auto border-solid border-2 border-[#AF0000]"
+  >
+    <button
+      id="prevBtn"
+      class="absolute -left-10 lg:-left-24 top-1/2 transform -translate-y-1/2 lg:hover:-translate-x-5 duration-300 opacity-25 lg:opacity-100"
     >
-      <h3 class="text-3xl font-bold mb-12 text-center">Testimonials</h3>
-      <div
-        class="relative container bg-black text-white px-24 py-8 rounded-3xl  mx-auto border-solid border-2 border-[#AF0000]"
-      >
-        <button
-          id="prevBtn"
-          class="absolute -left-24 top-1/2 transform -translate-y-1/2 hover:-translate-x-5 duration-300"
-        >
-          <!-- Left Arrow Icon -->
+      <!-- Left Arrow Icon -->
+      <img
+        src="Contents for Developer/Footer/arrow-left-red.png"
+        alt="Previous"
+      />
+    </button>
+
+    <div id="testimonialContainer">
+      <!-- Testimonial 1 -->
+      <div class="testimonial block lg:min-h-[350px] flex flex-col lg:justify-center h-[300px]">
+        <div class="flex items-center space-x-4">
           <img
-            src="Contents for Developer/Footer/arrow-left-red.png"
-            alt="Previous"
+            src="Contents for Developer/Home/Mayeesha.png"
+            alt="Testimonial"
+            class="h-16 w-16 lg:h-24 lg:w-24 rounded-full"
           />
-        </button>
-
-        <div id="testimonialContainer">
-          <!-- Testimonial 1 -->
-          <div class="testimonial block min-h-[350px] flex flex-col justify-center">
-            <div class="flex items-center space-x-4">
-              <img
-                src="Contents for Developer/Home/Mayeesha.png"
-                alt="Testimonial"
-                class="h-24 w-24 rounded-full"
-              />
-              <div>
-                <h4 class="font-bold text-[28px]">Akhyer Mayeesha Akram</h4>
-                <p class="text-[#d1d1d1] text-lg">
-                  Lead, Driver Education & Marketing, Uber
-                </p>
-              </div>
-            </div>
-            <p class="mt-4 ">
-              Sadman is the graphic wizard who sprinkled his magic on every
-              project we tackled together at Uber Bangladesh! From launching
-              Uber Rentals in Cox's Bazar to the meticulous planning of
-              promotional campaigns and driver training materials, Saddam's
-              creativity knew no bounds.
-            </p>
-            <p class="mt-2 ">
-              But what sets Saddam apart isn't just his talent—it's his
-              unwavering dedication and punctuality. He's always ready, always
-              sharp, and always open to feedback. I could always count on him to
-              deliver beyond expectations.
-            </p>
-            <p class="mt-2 ">
-              So if you're looking for someone who doesn't just meet the mark
-              but raises it, Saddam is your guy. Trust me, you won't regret
-              adding his flair to your team!
+          <div>
+            <h4 class="font-bold text-[18px] lg:text-[28px]">
+              Akhyer Mayeesha Akram
+            </h4>
+            <p class="text-[#d1d1d1] text-sm lg:text-lg">
+              Lead, Driver Education & Marketing, Uber
             </p>
           </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testimonial hidden min-h-[350px] flex flex-col justify-center">
-            <div class="flex items-center space-x-4">
-              <img
-                src="Contents for Developer/Home/Farisa.png"
-                alt="Testimonial"
-                class="h-24 w-24 rounded-full"
-              />
-              <div>
-                <h4 class="font-bold text-[28px]">Farisa Saadat</h4>
-                <p class="text-[#d1d1d1] text-lg">Project Manager, Qinetic Network</p>
-              </div>
-            </div>
-            <p class="mt-4 ">
-              Working with Sadman has been a reliable and satisfying
-              experience.His work consistently meets our expectations and adds
-              value to our projects.
-            </p>
-            <p class="mt-2 ">
-              Sadman has a good grasp of design principles and brings creativity
-              to his work,delivering visually appealing designs that effectively
-              communicated our message.His dedication to producing quality work
-              is evident in every project he undertakes.His ability to
-              understand our requirements and translate them into impactful
-              design is commendable.He is responsive to feedback and willing to
-              make revisions to ensure client satisfaction.
-            </p>
-            <p class="mt-2 ">
-              Overall,Sadman is a solid contributor to our team,and we
-              appreciate their constant effort and the positive impact he has
-              had in our projects.
-            </p>
-          </div>
-
-          <!-- Add more testimonials as needed -->
         </div>
-
-        <button
-          id="nextBtn"
-          class="absolute -right-24 top-1/2 transform -translate-y-1/2 hover:translate-x-5 duration-300"
-        >
-          <!-- Right Arrow Icon -->
-          <img
-            src="Contents for Developer/Footer/arrow-right-red.png"
-            alt="Next"
-          />
-        </button>
+        <p class="mt-4 text-xs lg:text-base">
+          Sadman is the graphic wizard who sprinkled his magic on every project
+          we tackled together at Uber Bangladesh! From launching Uber Rentals in
+          Cox's Bazar to the meticulous planning of promotional campaigns and
+          driver training materials, Saddam's creativity knew no bounds.
+        </p>
+        <p class="mt-2 text-xs lg:text-base">
+          But what sets Saddam apart isn't just his talent—it's his unwavering
+          dedication and punctuality. He's always ready, always sharp, and
+          always open to feedback. I could always count on him to deliver beyond
+          expectations.
+        </p>
+        <p class="mt-2 text-xs lg:text-base">
+          So if you're looking for someone who doesn't just meet the mark but
+          raises it, Saddam is your guy. Trust me, you won't regret adding his
+          flair to your team!
+        </p>
       </div>
-    </section>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial hidden lg:min-h-[350px] flex flex-col lg:justify-center  h-[300px]">
+        <div class="flex items-center space-x-4">
+          <img
+            src="Contents for Developer/Home/Farisa.png"
+            alt="Testimonial"
+            class="h-16 w-16 lg:h-24 lg:w-24 rounded-full"
+          />
+          <div>
+            <h4 class="font-bold text-[18px] lg:text-[28px]">Farisa Saadat</h4>
+            <p class="text-[#d1d1d1] text-sm lg:text-lg">
+              Project Manager, Qinetic Network
+            </p>
+          </div>
+        </div>
+        <p class="mt-4 text-xs lg:text-base">
+          Working with Sadman has been a reliable and satisfying experience. His
+          work consistently meets our expectations and adds value to our
+          projects.
+        </p>
+        <p class="mt-2 text-xs lg:text-base">
+          Sadman has a good grasp of design principles and brings creativity to
+          his work, delivering visually appealing designs that effectively
+          communicated our message. His dedication to producing quality work is
+          evident in every project he undertakes.
+        </p>
+        <p class="mt-2 text-xs lg:text-base">
+          Overall, Sadman is a solid contributor to our team, and we appreciate
+          their constant effort and the positive impact he has had in our
+          projects.
+        </p>
+      </div>
+
+      <!-- Add more testimonials as needed -->
+    </div>
+
+    <button
+      id="nextBtn"
+      class="absolute -right-10 lg:-right-24 top-1/2 transform -translate-y-1/2 lg:hover:translate-x-5 duration-300 opacity-25 lg:opacity-100"
+    >
+      <!-- Right Arrow Icon -->
+      <img
+        src="Contents for Developer/Footer/arrow-right-red.png"
+        alt="Next"
+      />
+    </button>
+  </div>
+</section>
+
     
 
     <!-- Footer Section -->
-    <footer class="lg:px-52 pt-8 lg:py-3 bg-gradient-to-b from-black from-30% to-red-950">
-      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center w-full">
+    <footer class="lg:px-52 lg:pt-8 pt-4 lg:py-3 bg-gradient-to-b from-black from-30% to-red-950">
+      <div class="container mx-auto flex lg:flex-row flex-col-reverse md:flex-row justify-between items-center w-full">
         <!-- Logo Section -->
-        <div class="text-center md:text-left mb-4 md:mb-0 pt-10">
+        <div class=" lg:mb-4 md:mb-0 lg:pt-10">
           <a href="index.html">
             <img src="Contents for Developer/Extras/Adox-Studio-Logo.png" alt="Adox Studio Logo">
           </a>
@@ -461,9 +506,9 @@
       </div>
     
       <!-- Copyright Section -->
-      <div class="text-center lg:mt-5 text-xs lg:text-sm px-5">
+      <div class="text-center lg:mt-5 text-xs lg:text-sm px-5 py-3 lg:py-0">
         <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000] to-white bg-clip-text text-transparent">
-          Giving in Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
+          Giving Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
         </p>
       </div>
     </footer>
