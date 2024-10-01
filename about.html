@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adox Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>document.documentElement.classList.add('js')</script>
+
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <!-- fonts-2 -->
+   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+   <script>
+     tailwind.config = {
+       theme: {
+         extend: {
+           colors: {
+             clifford: '#da373d',
+           },
+           fontFamily: {
+         archivo: ['Archivo', 'sans-serif'],
+         clash :[ 'Clash Display', 'sans-serif'],
+       },
+         }
+       }
+     }
+   </script>
+
+</head>
+
+<body class="bg-black text-white font-archivo">
+  <style>
+    .first-img:hover + .second-img {
+      display: block;
+    
+      
+    }
+  
+    .second-img {
+      display: none;
+    
+    }
+  </style>
+
+      <!-- Navigation Bar -->
+      <nav class="text-white py-5 px-52 lg:block hidden font-archivo font-medium mx-auto" style="background-image: url('Contents for Developer/Extras/Banner.jpg');">
+        <div class="container mx-auto flex justify-around">
+          <ul class="flex space-x-28 items-center">
+            <li>
+              <a
+                href="index.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >Portfolio</a
+              >
+            </li>
+            <li class="transition hover:-translate-y-2 duration-500">
+              <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light"
+                ><span class="font-semibold">ADOX</span> STUDIO</a
+              >
+            </li>
+            <li>
+              <a
+                href="powerhouse.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >Powerhouse</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- Main Container -->
+    <div class="lg:px-52 lg:py-16 px-8">
+      <!-- Top Section -->
+      <div class="">
+          <p class="lg:text-lg leading-tight mb-4">
+              As a graphic designer, I've expanded my expertise into cinematography and photography, honing skills to meet diverse client needs. My focus is on translating their vision into compelling visuals seamlessly. With a commitment to natural and  effective solutions, I strive to exceed expectations, giving life to every client's unique perspective.
+          </p>
+          <p class="text-white lg:text-lg mb-10 leading-tight">
+             <span class="inline-block bg-gradient-to-r from-[#AF0000] from-60%  to-red-400 bg-clip-text  text-transparent"> "Giving in life to your vision"</span> isn't just a slogan; it's a promise to deliver captivating, tailor-made creations that resonate with  audiences and fulfill the creative aspirations of each project.
+          </p>
+      </div>
+
+      <!-- Career Expedition Section -->
+      <div class="flex flex-col-reverse  lg:flex-row items-center justify-around  ">
+          <!-- Text Content -->
+          <div class="lg:w-2/3 delay-[300ms] duration-[900ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">
+              <h1 class="text-5xl font-semibold inline-block bg-gradient-to-r font-clash from-[#AF0000] from-20%  to-white bg-clip-text  text-transparent my-2">CAREER EXPEDITION</h1>
+              <p class="lg:leading-tight mb-4 text-lg">
+                  The journey of my career started with a passion for graphic design, which led <br> me to explore video editing through YouTube. Despite facing limitations,<br> I completed a graphic design course and secured my first local client after six <br> months of practice. Gradually, I acquired more clients and upgraded my setup <br> to delve into video editing. Freelancing for two years honed my skills until I <br> landed my first job at Qinetic Network, where I discovered a deep interest in <br> cinematography and photography. Although the job was short-lived,<br> it provided me with a valuable network. I devoted countless hours to learning <br> filmmaking, which eventually led to a job at Uber after university graduation. <br>  Though brief, my time at Uber was rewarding until unforeseen circumstances <br>  led to a freelance opportunity in communications. This marked the beginning <br> of my full-time freelance career, allowing me to pursue directing music videos, <br> interviews, premieres, and more.
+              </p>
+              <p class="leading-tight text-lg">
+                  I owe gratitude to my friend <span class="inline-block bg-gradient-to-r from-[#AF0000]  to-white bg-clip-text  text-transparent font-bold">Mohammed Shayekh</span>, who has been by my side <br> since my graphic design journey began.
+              </p>
+          </div>
+
+          <!-- Image -->
+          <div class="lg:w-[40%] flex justify-center lg:justify-start  lg:mt-0 delay-[300ms] duration-[900ms] taos:translate-x-[200px] taos:opacity-0 relative" data-taos-offset="400">
+              <img src="Contents for Developer/About/guy3.png" alt="Career Expedition Image" class="lg:max-w-full w-fit first-img ">
+              <img src="Contents for Developer/Extras/Shayekh.png" alt="" class="absolute second-img">
+          </div>
+      </div>
+  </div>
+
+<!-- Core Values -->
+  <!-- Main Container -->
+  <div class="lg:px-52 pt-8 ">
+    <!-- Core Values Heading -->
+    <h2 class="text-center text-3xl font-semibold pb-7">Core Values</h2>
+
+<!-- Core Values Cards -->
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-8  lg:my-32 duration-[1500ms] taos:opacity-0 delay-700 hover:-translate-y-7 hover:delay-0 hover:duration-300" >
+       
+       
+        <!-- Card 1 -->
+
+    <div class="bg-gradient-to-b from-[#AF0000]  to-white p-[1px] rounded-2xl hover:-translate-y-10 duration-500">
+        <div class="bg-black px-10 py-16 rounded-2xl text-center transition ">
+            <img src="Contents for Developer/About/Patience.png" alt="Patience Icon" class=" mx-auto mb-4">
+            <h3 class="text-xl">PATIENCE</h3>
+        </div>
+    </div>
+
+        <!-- Card 2 -->
+
+    <div class="bg-gradient-to-b from-[#AF0000]  to-white p-[1px] rounded-2xl lg:-translate-y-16 lg:hover:-translate-y-28 hover:-translate-y-10 duration-500">
+        <div class="bg-black px-10 py-16  rounded-2xl text-center transition  ">
+            <img src="Contents for Developer/About/Scratch.png" alt="Scratch Believer Icon" class=" mx-auto mb-4">
+            <h3 class="text-xl">SCRATCH BELIEVER</h3>
+        </div>
+    </div>  
+
+        <!-- Card 3 -->
+
+    <div class="bg-gradient-to-b from-[#AF0000]  to-white p-[1px] rounded-2xl hover:-translate-y-10 duration-500"> 
+        <div class="bg-black px-10 py-16  rounded-2xl text-center transition ">
+            <img src="Contents for Developer/About/Time-management.png" alt="Time Management Icon" class=" mx-auto mb-4">
+            <h3 class="text-xl">TIME MANAGEMENT</h3>
+        </div>
+    </div> 
+
+    </div>
+</div>
+
+<!-- contact info -->
+<div class="px-12 pb-16 delay-[500ms] duration-[1000ms] taos:opacity-0">
+  <!-- Contact Information Heading -->
+  <h2 class="text-center text-3xl font-semibold mb-12">Contact Information</h2>
+
+  <!-- Contact Information Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:px-52">
+      <!-- Card 1 -->
+      <div class="bg-[#AF0000] p-6 rounded-lg text-center">
+          <img src="Contents for Developer/Extras/icon---phone.png" alt="Phone Icon" class="w-8 h-8 mx-auto mb-4">
+          <p>+880 18 4261 3484</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#AF0000] p-6 rounded-lg text-center">
+          <img src="Contents for Developer/Extras/icon---mail.png" alt="Email Icon" class="w-8 h-8 mx-auto mb-4">
+          <p>adoxstudio@gmail.com<br>sadman.prince018@gmail.com</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#AF0000] p-6 rounded-lg text-center">
+          <img src="Contents for Developer/Footer/icon-fb.png" alt="Facebook Icon" class="w-8 h-8 mx-auto mb-4">
+          <p>facebook.com/adoxstudio<br>facebook.com/sadman.islam146</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-[#AF0000] p-6 rounded-lg text-center">
+          <img src="Contents for Developer/Footer/icon-insta.png" alt="Instagram Icon" class="w-8 h-8 mx-auto mb-4">
+          <p>instagram.com/adox.studio<br>instagram.com/spi_97_</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-[#AF0000] p-6 rounded-lg text-center">
+          <img src="Contents for Developer/Footer/icon-behance.png" alt="Behance Icon" class="w-8 h-8 mx-auto mb-4">
+          <p>behance.net/sadmanislam4</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-[#AF0000] p-6 rounded-lg text-center">
+          <img src="Contents for Developer/Footer/icon-twitter.png" alt="Twitter Icon" class="w-8 h-8 mx-auto mb-4">
+          <p>twitter.com/spi_97_</p>
+      </div>
+  </div>
+</div>
+
+<!-- Text section -->
+<div class="container mx-auto lg:px-52 px-8 delay-[700ms] duration-[1000ms] taos:opacity-0 ">
+<img src="Contents for Developer/About/Text.png" alt="" class="w-fit">
+</div> 
+
+     <!-- Testimonial section -->
+     <section
+     class="bg-black py-16 delay-700 duration-[1000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0 hidden lg:block"
+   >
+     <h3 class="text-3xl font-bold mb-12 text-center">Testimonials</h3>
+     <div
+       class="relative bg-black text-white px-24 py-8 rounded-3xl max-w-3xl mx-auto border-solid border-2 border-[#AF0000]"
+     >
+       <button
+         id="prevBtn"
+         class="absolute -left-24 top-1/2 transform -translate-y-1/2 hover:-translate-x-5 duration-300"
+       >
+         <!-- Left Arrow Icon -->
+         <img
+           src="Contents for Developer/Footer/arrow-left-red.png"
+           alt="Previous"
+         />
+       </button>
+
+       <div id="testimonialContainer">
+         <!-- Testimonial 1 -->
+         <div class="testimonial block min-h-[370px]">
+           <div class="flex items-center space-x-4">
+             <img
+               src="Contents for Developer/Home/Mayeesha.png"
+               alt="Testimonial"
+               class="h-24 w-24 rounded-full"
+             />
+             <div>
+               <h4 class="font-bold text-[28px]">Akhyer Mayeesha Akram</h4>
+               <p class="text-[#d1d1d1] text-lg">
+                 Lead, Driver Education & Marketing, Uber
+               </p>
+             </div>
+           </div>
+           <p class="mt-4 ">
+             Sadman is the graphic wizard who sprinkled his magic on every
+             project we tackled together at Uber Bangladesh! From launching
+             Uber Rentals in Cox's Bazar to the meticulous planning of
+             promotional campaigns and driver training materials, Saddam's
+             creativity knew no bounds.
+           </p>
+           <p class="mt-2 ">
+             But what sets Saddam apart isn't just his talent—it's his
+             unwavering dedication and punctuality. He's always ready, always
+             sharp, and always open to feedback. I could always count on him to
+             deliver beyond expectations.
+           </p>
+           <p class="mt-2 ">
+             So if you're looking for someone who doesn't just meet the mark
+             but raises it, Saddam is your guy. Trust me, you won't regret
+             adding his flair to your team!
+           </p>
+         </div>
+
+         <!-- Testimonial 2 -->
+         <div class="testimonial hidden min-h-[370px]">
+           <div class="flex items-center space-x-4">
+             <img
+               src="Contents for Developer/Home/Farisa.png"
+               alt="Testimonial"
+               class="h-24 w-24 rounded-full"
+             />
+             <div>
+               <h4 class="font-bold text-[28px]">Farisa Saadat</h4>
+               <p class="text-[#d1d1d1] text-lg">Project Manager, Qinetic Network</p>
+             </div>
+           </div>
+           <p class="mt-4 ">
+             Working with Sadman has been a reliable and satisfying
+             experience.His work consistently meets our expectations and adds
+             value to our projects.
+           </p>
+           <p class="mt-2 ">
+             Sadman has a good grasp of design principles and brings creativity
+             to his work,delivering visually appealing designs that effectively
+             communicated our message.His dedication to producing quality work
+             is evident in every project he undertakes.His ability to
+             understand our requirements and translate them into impactful
+             design is commendable.He is responsive to feedback and willing to
+             make revisions to ensure client satisfaction.
+           </p>
+           <p class="mt-2 ">
+             Overall,Sadman is a solid contributor to our team,and we
+             appreciate their constant effort and the positive impact he has
+             had in our projects.
+           </p>
+         </div>
+
+         <!-- Add more testimonials as needed -->
+       </div>
+
+       <button
+         id="nextBtn"
+         class="absolute -right-24 top-1/2 transform -translate-y-1/2 hover:translate-x-5 duration-300"
+       >
+         <!-- Right Arrow Icon -->
+         <img
+           src="Contents for Developer/Footer/arrow-right-red.png"
+           alt="Next"
+         />
+       </button>
+     </div>
+   </section>
+
+
+    <!-- Footer Section -->
+    <footer class="lg:px-52  pt-8 lg:py-3 bg-gradient-to-b from-black from-30%  to-red-950">
+
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+              <h2 class="lg:text-3xl text-xl font-clash font-light pt-12"><span class="font-semibold">ADOX</span> STUDIO</h2>
+
+          </div>
+          <div class="text-center">
+              <h3 class="lg:text-lg  mb-2">Get in Touch</h3>
+              <div class="flex justify-center lg:space-x-12 space-x-3">
+                  <!-- Social Media Icons -->
+                  <a href="#" class="text-2xl   hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-fb.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-insta.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-behance.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-linkedin.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-twitter.png" alt="">
+                  </a>
+              </div>
+          </div>
+          <div class="text-right hidden lg:block pt-4">
+              <h3 class="text-lg  mb-2">Connect <span class="text-[#AF0000]">Faster</span></h3>
+              <div class="flex items-center justify-end">
+                  <p class="text-white  mr-2">+880 18 4281 3849</p>
+                  <img src="Contents for Developer/Footer/icon-phone.png" alt="">
+              </div>
+              <div class="flex items-center justify-end mt-2">
+                  <p class="text-white  m mr-2">adoxstudio@gmail.com</p>
+                  <img src="Contents for Developer/Footer/icon-mail.png" alt="">
+              </div>
+          </div>
+         <br> 
+         </div>
+      <div class="text-center lg:mt-5 text-xs lg:text-sm px-5">
+          <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000]  to-white bg-clip-text text-transparent ">
+              Giving Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
+          </p>
+      </div>
+    </footer>
+  
+          
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+</body>
+</html>

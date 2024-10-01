@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adox Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- fonts-2 -->
+     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+     <script>
+       tailwind.config = {
+         theme: {
+           extend: {
+             colors: {
+               clifford: '#da373d',
+             },
+             fontFamily: {
+           archivo: ['Archivo', 'sans-serif'],
+           clash :[ 'Clash Display', 'sans-serif'],
+         },
+           }
+         }
+       }
+     </script>
+   
+    
+</head>
+<body class=" bg-black text-white font-archivo">
+     <!-- Navigation Bar -->
+     <nav class="text-white py-5 px-52 lg:block hidden font-archivo font-medium mx-auto" style="background-image: url('Contents for Developer/Extras/Nav\ Bar.png');">
+        <div class="container mx-auto flex justify-around">
+          <ul class="flex space-x-28 items-center" >
+            <li>
+              <a
+                href="index.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >Portfolio</a
+              >
+            </li>
+            <li class="transition hover:-translate-y-2 duration-500">
+              <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light"
+                ><span class="font-semibold">ADOX</span> STUDIO</a
+              >
+            </li>
+            <li>
+              <a
+                href="powerhouse.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >Powerhouse</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+ 
+
+  <!-- Container for the main content -->
+  <div class="flex flex-col   min-h-screen">
+    <!-- Icon and Arrows -->
+    <div class="flex items-center justify-between w-full max-w-2xl mx-auto">
+        <!-- Left Arrow -->
+        <button class="p-4" id="left-arrow">
+            <img src="Contents for Developer/Powerhouse - MP/arrow-left-red.png" alt="Left Arrow" class="hover:-translate-x-5 duration-300">
+        </button>
+
+        <!-- Icon in the center -->
+        <div class="flex items-center justify-center pt-10">
+            <img id="main-icon" src="Contents for Developer/Powerhouse - MD/Magix-Design.png" alt="Document Icon" class="h-80 w-80">
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="p-4" id="right-arrow">
+            <img src="Contents for Developer/Powerhouse - MP/arrow-right-red.png" alt="Right Arrow" class="hover:translate-x-5 duration-300">
+        </button>
+    </div>
+
+    <!-- Title Section -->
+    <div class="text-center mt-12">
+        <h1 id="title" class="text-6xl font-semibold font-clash">
+            <span class="inline-block bg-gradient-to-r from-[#AF0000] from-10%  to-white to-50% bg-clip-text  text-transparent">MAGIX</span><br> DESIGN
+        </h1>
+    </div>
+
+    <!-- Description Section -->
+    <div class=" text-start mt-6 px-52">
+        <p id="description" class="text-lg text-start">
+          Graphic design is the art of visual communication, encompassing digital and print media collaterals across various canvas sizes. It merges creativity with technology to convey messages, ideas, and emotions through compelling imagery and design elements.<br><br> Graphic Design Service includes the following types of content below:
+        </p>
+    </div>
+
+        <!-- Services Section -->
+        <div id="services" class=" grid grid-cols-2 sm:grid-cols-4 gap-6  text-lg mt-8 px-52 ">
+         
+          <div class="flex-col ">
+          <div class="pb-2">&bull; Logo Design</div>
+          <div class="pb-2">&bull; Business Card</div>
+          <div class="pb-2">&bull; Stationery</div>
+          <div class="pb-2"> &bull; Label Design</div>
+          <div class="pb-2">&bull; Letterhead</div>
+          <div class="pb-2">&bull; Signage</div>
+          <div class="pb-2">&bull; Billboard</div>
+          <div class="pb-2">&bull; Trade Show Booth</div>
+          <div class="pb-2">&bull; Car Wrap Design</div>
+          <div class="pb-2">&bull; Web Design</div>
+          <div class="pb-2">&bull; App Design</div>
+          <div class="pb-2"> &bull; Ads Banner</div>
+          </div>
+          <div>
+          <div class="pb-2">&bull; Flyer</div>
+          <div class="pb-2">&bull; Postcard</div>
+          <div class="pb-2">&bull; Brochure</div>
+          <div class="pb-2">&bull; Poster</div>
+          <div class="pb-2">&bull; Catalogue</div>
+          <div class="pb-2">&bull; Envelope</div>
+          <div class="pb-2">&bull; Magazine</div>
+          <div class="pb-2">&bull; Newspaper Ad</div>
+          <div class="pb-2">&bull; Sticker</div>
+          <div class="pb-2">&bull; Resume</div>
+          <div class="pb-2">&bull; Menu</div>
+          <div>&bull; T-shirt Design</div>
+          </div>
+          <div>
+          <div class="pb-2">&bull; Two-fold Brochure</div>
+          <div class="pb-2">&bull; Trifold Brochure</div>
+          <div class="pb-2">&bull; Booklet</div>
+          <div class="pb-2">&bull; In-app Image</div>
+          <div class="pb-2">&bull; Placard</div>
+          <div class="pb-2">&bull; Backdrop</div>
+          <div class="pb-2" >&bull; Cover photo</div>
+          <div class="pb-2">&bull; Mnemonic Design</div>
+          <div class="pb-2">&bull; Brand Style Guides</div>
+          <div class="pb-2">&bull; Fonts and Typography</div>
+          <div class="pb-2">&bull; UI/UX Design</div>
+          </div>
+          <div>
+          <div class="pb-2">&bull; Album Cover Design</div>
+          <div class="pb-2">&bull; Portfolio Design</div>
+          <div class="pb-2">&bull; ID Card Design</div>
+          <div class="pb-2">&bull; Image Editing</div>
+          <div class="pb-2">&bull; Book Design</div>
+          <div class="pb-2">&bull; Book Cover Design</div>
+          <div class="pb-2">&bull; Packaging Design</div>
+          <div class="pb-2">&bull; X-Banner</div>
+          <div class="pb-2">&bull; Roman Banner</div>
+          <div class="pb-2">&bull; Newsletter</div>
+          <div class="pb-2">&bull; Landing Page</div>
+          </div>
+          
+        </div>
+        
+        <!--Inside content  -->
+        <div id="insides" class="px-52 py-16">
+          <h1 class="text-[#AF0000] text-4xl font-bold py-5">Digital Media Collaterals</h1>
+          <h2>All sizes are in the Standard Dimensions</h2>
+          <img src="Contents for Developer/Powerhouse - MD/Desktop MD1.png" alt="">
+          <h1 class="text-[#AF0000] text-4xl font-bold py-5">Print Media Collaterals</h1>
+          <h2>All sizes are in the Standard Dimensions</h2>
+          <img src="Contents for Developer/Powerhouse - MD/Desktop MD2.png" alt="">
+        </div>
+   </div>
+
+
+
+    <!-- Footer Section -->
+    <footer class="lg:px-52  pt-8 lg:py-3 bg-gradient-to-b from-black from-30%  to-red-950">
+
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+              <h2 class="lg:text-3xl text-xl font-clash font-light pt-12"><span class="font-semibold">ADOX</span> STUDIO</h2>
+
+          </div>
+          <div class="text-center">
+              <h3 class="lg:text-lg  mb-2">Get in Touch</h3>
+              <div class="flex justify-center lg:space-x-12 space-x-3">
+                  <!-- Social Media Icons -->
+                  <a href="#" class="text-2xl   hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-fb.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-insta.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-behance.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-linkedin.png" alt="">
+                  </a>
+                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
+                      <img src="Contents for Developer/Footer/icon-twitter.png" alt="">
+                  </a>
+              </div>
+          </div>
+          <div class="text-right hidden lg:block pt-4">
+              <h3 class="text-lg  mb-2">Connect <span class="text-[#AF0000]">Faster</span></h3>
+              <div class="flex items-center justify-end">
+                  <p class="text-white  mr-2">+880 18 4281 3849</p>
+                  <img src="Contents for Developer/Footer/icon-phone.png" alt="">
+              </div>
+              <div class="flex items-center justify-end mt-2">
+                  <p class="text-white  m mr-2">adoxstudio@gmail.com</p>
+                  <img src="Contents for Developer/Footer/icon-mail.png" alt="">
+              </div>
+          </div>
+         <br> 
+         </div>
+      <div class="text-center lg:mt-5 text-xs lg:text-sm px-5">
+          <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000]  to-white bg-clip-text text-transparent ">
+              Giving Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
+          </p>
+      </div>
+    </footer>
+  
+          
+<script src="powerhouse.js"></script>
+</body>
+</html>

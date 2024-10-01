@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+#foot{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 22.27%, #AF0000 134.77%);
+
+}
