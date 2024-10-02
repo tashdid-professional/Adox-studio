@@ -66,13 +66,15 @@ const content = [
         
         `,
         insideContent: `
-            <h1 class="text-[#AF0000] text-4xl font-bold py-5">Digital Media Collaterals</h1>
-            <h2>All sizes are in the Standard Dimensions</h2>
-            <img src="Contents for Developer/Powerhouse - MD/Desktop MD1.png" alt="">
-            <h1 class="text-[#AF0000] text-4xl font-bold py-5">Print Media Collaterals</h1>
-            <h2>All sizes are in the Standard Dimensions</h2>
-            <img src="Contents for Developer/Powerhouse - MD/Desktop MD2.png" alt="">
-        `
+            <h1 class="text-[#AF0000] lg:text-4xl text-2xl font-bold py-5">Digital Media Collaterals</h1>
+          <h2>All sizes are in the Standard Dimensions</h2>
+          <img src="Contents for Developer/Powerhouse - MD/Desktop MD1.png" alt="" class="lg:block hidden">
+          <img src="Contents for Developer/Powerhouse - MD/MB MD1.png" alt="" class="block lg:hidden">
+          <h1 class="text-[#AF0000] lg:text-4xl text-2xl font-bold py-5">Print Media Collaterals</h1>
+          <h2>All sizes are in the Standard Dimensions</h2>
+          <img src="Contents for Developer/Powerhouse - MD/Desktop MD2.png" alt="" class="lg:block hidden">
+          <img src="Contents for Developer/Powerhouse - MD/MB MD2.png" alt="" class="block lg:hidden">
+          `
     },
    
   
@@ -107,7 +109,7 @@ const content = [
 
         `,
         insideContent: `
-            <h1 class="text-[#AF0000] text-4xl font-bold py-5">Rule of thirds</h1>
+            <h1 class="text-[#AF0000] lg:text-4xl text-2xl font-bold py-5">Rule of thirds</h1>
             <h2>Universal Dimension</h2>
             <img src="Contents for Developer/Powerhouse - MC/Desktop MC.png" alt="">
         `
@@ -145,9 +147,10 @@ const content = [
 
         `,
         insideContent: `
-            <h1 class="text-[#AF0000] text-4xl font-bold py-5">Frame Dimensions</h1>
+            <h1 class="text-[#AF0000] lg:text-4xl text-2xl font-bold py-5">Frame Dimensions</h1>
             <h2>All sizes are in the Standard Dimensions</h2>
-            <img src="Contents for Developer/Powerhouse - MP/Desktop MP.png" alt="">
+            <img src="Contents for Developer/Powerhouse - MP/Desktop MP.png" alt="" class="lg:block hidden">
+            <img src="Contents for Developer/Powerhouse - MP/MB MP.png" alt="" class="lg:hidden block">
             <video src="Contents for Developer/Powerhouse - MP/Video-gt86.mp4"></video>
             
         `

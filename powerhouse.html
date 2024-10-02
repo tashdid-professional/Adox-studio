@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
     <title>Adox Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
@@ -33,52 +34,87 @@
 </head>
 <body class=" bg-black text-white font-archivo">
      <!-- Navigation Bar -->
-     <nav class="text-white py-5 px-52 lg:block hidden font-archivo font-medium mx-auto" style="background-image: url('Contents for Developer/Extras/Nav\ Bar.png');">
-        <div class="container mx-auto flex justify-around">
-          <ul class="flex space-x-28 items-center" >
-            <li>
-              <a
-                href="index.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="portfolio.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >Portfolio</a
-              >
-            </li>
-            <li class="transition hover:-translate-y-2 duration-500">
-              <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light"
-                ><span class="font-semibold">ADOX</span> STUDIO</a
-              >
-            </li>
-            <li>
-              <a
-                href="powerhouse.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >Powerhouse</a
-              >
-            </li>
-            <li>
-              <a
-                href="about.html"
-                class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-                >About</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+     <nav class="text-white py-6 lg:px-52 font-archivo font-medium mx-auto sticky top-0 z-[1000] rounded-b-xl lg:rounded-b-2xl" style="background-image: url('Contents for Developer/Extras/Red\ Gradient.jpg'); background-size: cover;">
+      <div class="container mx-auto flex justify-around lg:justify-around items-center">
+        <!-- Logo / Studio Name (always visible) -->
+        <a href="#" class="lg:hidden text-2xl font-clash font-light">
+          <span class="font-semibold text-center ">ADOX</span> STUDIO
+        </a>
+    
+        <!-- Hamburger Menu Button (only visible on mobile) -->
+        <button id="menuToggle" class="lg:hidden focus:outline-none flex ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+    
+        <!-- Desktop Navigation (visible on larger screens) -->
+        <ul class="hidden lg:flex space-x-28 items-center">
+          <li>
+            <a href="index.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Home</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Portfolio</a>
+          </li>
+          <li class="transition hover:-translate-y-2 duration-500">
+            <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light">
+              <span class="font-semibold">ADOX</span> STUDIO
+            </a>
+          </li>
+          <li>
+            <a href="powerhouse.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Powerhouse</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">About</a>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- Mobile Menu (only visible on mobile) -->
+      <div id="mobileMenu" class="hidden lg:hidden  w-full">
+        <ul class="flex flex-col space-y-6 items-center py-4">
+          <li>
+            <a href="index.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Home</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Portfolio</a>
+          </li>
+          <li>
+            <a href="powerhouse.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Powerhouse</a>
+          </li>
+          <li>
+            <a href="about.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <script>
+      // JavaScript to toggle mobile menu
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+    
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
  
 
   <!-- Container for the main content -->
   <div class="flex flex-col   min-h-screen">
     <!-- Icon and Arrows -->
-    <div class="flex items-center justify-between w-full max-w-2xl mx-auto">
+    <div class="flex items-center justify-between w-full max-w-2xl mx-auto px-5">
         <!-- Left Arrow -->
         <button class="p-4" id="left-arrow">
             <img src="Contents for Developer/Powerhouse - MP/arrow-left-red.png" alt="Left Arrow" class="hover:-translate-x-5 duration-300">
@@ -86,7 +122,7 @@
 
         <!-- Icon in the center -->
         <div class="flex items-center justify-center pt-10">
-            <img id="main-icon" src="Contents for Developer/Powerhouse - MD/Magix-Design.png" alt="Document Icon" class="h-80 w-80">
+            <img id="main-icon" src="Contents for Developer/Powerhouse - MD/Magix-Design.png" alt="Document Icon" class="lg:h-80 lg:w-80">
         </div>
 
         <!-- Right Arrow -->
@@ -97,20 +133,20 @@
 
     <!-- Title Section -->
     <div class="text-center mt-12">
-        <h1 id="title" class="text-6xl font-semibold font-clash">
+        <h1 id="title" class="lg:text-6xl text-4xl font-semibold font-clash">
             <span class="inline-block bg-gradient-to-r from-[#AF0000] from-10%  to-white to-50% bg-clip-text  text-transparent">MAGIX</span><br> DESIGN
         </h1>
     </div>
 
     <!-- Description Section -->
-    <div class=" text-start mt-6 px-52">
-        <p id="description" class="text-lg text-start">
+    <div class=" text-start mt-6 lg:px-52 px-8">
+        <p id="description" class="lg:text-lg text-sm text-start">
           Graphic design is the art of visual communication, encompassing digital and print media collaterals across various canvas sizes. It merges creativity with technology to convey messages, ideas, and emotions through compelling imagery and design elements.<br><br> Graphic Design Service includes the following types of content below:
         </p>
     </div>
 
         <!-- Services Section -->
-        <div id="services" class=" grid grid-cols-2 sm:grid-cols-4 gap-6  text-lg mt-8 px-52 ">
+        <div id="services" class=" grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm lg:text-lg mt-8 lg:px-52 px-8">
          
           <div class="flex-col ">
           <div class="pb-2">&bull; Logo Design</div>
@@ -170,64 +206,72 @@
         </div>
         
         <!--Inside content  -->
-        <div id="insides" class="px-52 py-16">
-          <h1 class="text-[#AF0000] text-4xl font-bold py-5">Digital Media Collaterals</h1>
+        <div id="insides" class="lg:px-52 px-8 lg:py-16 mb-8">
+          <h1 class="text-[#AF0000] lg:text-4xl text-2xl font-bold py-5">Digital Media Collaterals</h1>
           <h2>All sizes are in the Standard Dimensions</h2>
-          <img src="Contents for Developer/Powerhouse - MD/Desktop MD1.png" alt="">
-          <h1 class="text-[#AF0000] text-4xl font-bold py-5">Print Media Collaterals</h1>
+          <img src="Contents for Developer/Powerhouse - MD/Desktop MD1.png" alt="" class="lg:block hidden">
+          <img src="Contents for Developer/Powerhouse - MD/MB MD1.png" alt="" class="block lg:hidden">
+          <h1 class="text-[#AF0000] lg:text-4xl text-2xl font-bold py-5">Print Media Collaterals</h1>
           <h2>All sizes are in the Standard Dimensions</h2>
-          <img src="Contents for Developer/Powerhouse - MD/Desktop MD2.png" alt="">
+          <img src="Contents for Developer/Powerhouse - MD/Desktop MD2.png" alt="" class="lg:block hidden">
+          <img src="Contents for Developer/Powerhouse - MD/MB MD2.png" alt="" class="block lg:hidden">
         </div>
    </div>
 
 
 
     <!-- Footer Section -->
-    <footer class="lg:px-52  pt-8 lg:py-3 bg-gradient-to-b from-black from-30%  to-red-950">
-
-      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div class="text-center md:text-left mb-4 md:mb-0">
-              <h2 class="lg:text-3xl text-xl font-clash font-light pt-12"><span class="font-semibold">ADOX</span> STUDIO</h2>
-
+    <footer class="lg:px-52 lg:pt-8 pt-4 lg:py-3 bg-gradient-to-b from-black from-30% to-red-950">
+      <div class="container mx-auto flex lg:flex-row flex-col-reverse md:flex-row justify-between items-center w-full">
+        <!-- Logo Section -->
+        <div class=" lg:mb-4 md:mb-0 lg:pt-10">
+          <a href="index.html">
+            <img src="Contents for Developer/Extras/Adox-Studio-Logo.png" alt="Adox Studio Logo" class="lg:w-full w-[50%] mx-auto">
+          </a>
+        </div>
+        
+        <!-- Get in touch and Social Media Icons -->
+        <div class="text-center flex flex-col justify-center w-full">
+          <h3 class="lg:text-lg mb-5 text-white">Get in Touch</h3>
+          <div class="flex justify-center lg:space-x-12 space-x-3">
+            <!-- Social Media Icons -->
+            <a href="#" class="text-2xl hover:-translate-y-[10px] duration-300">
+              <img src="Contents for Developer/Footer/icon-fb.png" alt="Facebook">
+            </a>
+            <a href="#" class="text-2xl hover:-translate-y-[10px] duration-300">
+              <img src="Contents for Developer/Footer/icon-insta.png" alt="Instagram">
+            </a>
+            <a href="#" class="text-2xl hover:-translate-y-[10px] duration-300">
+              <img src="Contents for Developer/Footer/icon-behance.png" alt="Behance">
+            </a>
+            <a href="#" class="text-2xl hover:-translate-y-[10px] duration-300">
+              <img src="Contents for Developer/Footer/icon-linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="#" class="text-2xl hover:-translate-y-[10px] duration-300">
+              <img src="Contents for Developer/Extras/icon-fiverr.png" alt="Fiverr">
+            </a>
           </div>
-          <div class="text-center">
-              <h3 class="lg:text-lg  mb-2">Get in Touch</h3>
-              <div class="flex justify-center lg:space-x-12 space-x-3">
-                  <!-- Social Media Icons -->
-                  <a href="#" class="text-2xl   hover:-translate-y-4 duration-300">
-                      <img src="Contents for Developer/Footer/icon-fb.png" alt="">
-                  </a>
-                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                      <img src="Contents for Developer/Footer/icon-insta.png" alt="">
-                  </a>
-                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                      <img src="Contents for Developer/Footer/icon-behance.png" alt="">
-                  </a>
-                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                      <img src="Contents for Developer/Footer/icon-linkedin.png" alt="">
-                  </a>
-                  <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                      <img src="Contents for Developer/Footer/icon-twitter.png" alt="">
-                  </a>
-              </div>
+        </div>
+        
+        <!-- Connect Faster Column (Right Aligned, No Margin) -->
+        <div class="lg:w-auto text-right lg:ml-auto hidden lg:block pt-4">
+          <h3 class="text-lg mb-4 text-white">Connect <span class="text-[#AF0000]">Faster</span></h3>
+          <div class="flex items-center justify-end">
+            <p class="text-white mr-2">+880 18 4281 3849</p>
+            <img src="Contents for Developer/Footer/icon-phone.png" alt="Phone Icon">
           </div>
-          <div class="text-right hidden lg:block pt-4">
-              <h3 class="text-lg  mb-2">Connect <span class="text-[#AF0000]">Faster</span></h3>
-              <div class="flex items-center justify-end">
-                  <p class="text-white  mr-2">+880 18 4281 3849</p>
-                  <img src="Contents for Developer/Footer/icon-phone.png" alt="">
-              </div>
-              <div class="flex items-center justify-end mt-2">
-                  <p class="text-white  m mr-2">adoxstudio@gmail.com</p>
-                  <img src="Contents for Developer/Footer/icon-mail.png" alt="">
-              </div>
+          <div class="flex items-center justify-end mt-2">
+            <p class="text-white mr-2">adoxstudio@gmail.com</p>
+            <img src="Contents for Developer/Footer/icon-mail.png" alt="Mail Icon">
           </div>
-         <br> 
-         </div>
-      <div class="text-center lg:mt-5 text-xs lg:text-sm px-5">
-          <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000]  to-white bg-clip-text text-transparent ">
-              Giving Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
-          </p>
+        </div>
+      </div>
+    
+      <!-- Copyright Section -->
+      <div class="text-center lg:mt-5 text-xs lg:text-sm px-5 py-3 lg:py-0">
+        <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000] to-white bg-clip-text text-transparent">
+          Giving Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
+        </p>
       </div>
     </footer>
   
