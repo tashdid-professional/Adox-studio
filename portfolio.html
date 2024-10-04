@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="only light">
     <title>Adox Studio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
      <!-- fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,333 +13,363 @@
      <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      <!-- fonts-2 -->
      <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+     <script src="https://cdn.tailwindcss.com"></script>
      <script>
-       tailwind.config = {
-         theme: {
-           extend: {
-             colors: {
-               clifford: '#da373d',
-             },
-             fontFamily: {
-           archivo: ['Archivo', 'sans-serif'],
-           clash :[ 'Clash Display', 'sans-serif'],
-         },
-           }
-         }
-       }
-     </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            },
+            fontFamily: {
+              archivo: ['Archivo', 'sans-serif'],
+              clash: ['Clash Display', 'sans-serif'],
+            },
+          }
+        },
+     
+      }
+    </script>
   </head>
   <body class="bg-black font-archivo">
     <!-- Navigation Bar -->
-    <nav class="text-white py-5 px-52 lg:block hidden font-archivo font-medium mx-auto rounded-b-xl lg:rounded-b-2xl" style="background-image: url('Contents for Developer/Extras/Banner.jpg');">
-      <div class="container mx-auto flex justify-around">
-        <ul class="flex space-x-28 items-center">
-          <li>
-            <a
-              href="index.html"
-              class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-              >Home</a
+    <nav class="text-white py-6 lg:px-52 font-archivo font-medium mx-auto sticky top-0 z-[1000] rounded-b-xl lg:rounded-b-2xl" style="background-image: url('Contents for Developer/Extras/Red\ Gradient.jpg'); background-size: cover">
+        <div class="container mx-auto flex justify-around lg:justify-around items-center">
+          <!-- Logo / Studio Name (always visible) -->
+          <a href="#" class="lg:hidden text-2xl font-clash font-light">
+            <span class="font-semibold text-center ">ADOX</span> STUDIO
+          </a>
+      
+          <!-- Hamburger Menu Button (only visible on mobile) -->
+          <button id="menuToggle" class="lg:hidden focus:outline-none flex ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-          </li>
-          <li>
-            <a
-              href="portfolio.html"
-              class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-              >Portfolio</a
-            >
-          </li>
-          <li class="transition hover:-translate-y-2 duration-500">
-            <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light"
-              ><span class="font-semibold">ADOX</span> STUDIO</a
-            >
-          </li>
-          <li>
-            <a
-              href="powerhouse.html"
-              class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-              >Powerhouse</a
-            >
-          </li>
-          <li>
-            <a
-              href="about.html"
-              class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2"
-              >About</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+      
+          <!-- Desktop Navigation (visible on larger screens) -->
+          <ul class="hidden lg:flex space-x-28 items-center">
+            <li>
+              <a href="index.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Home</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Portfolio</a>
+            </li>
+            <li class="transition hover:-translate-y-2 duration-500">
+              <a href="#" class="text-2xl transition hover:-translate-y-4 font-clash font-light">
+                <span class="font-semibold">ADOX</span> STUDIO
+              </a>
+            </li>
+            <li>
+              <a href="powerhouse.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Powerhouse</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">About</a>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Mobile Menu (only visible on mobile) -->
+        <div id="mobileMenu" class="hidden lg:hidden  w-full">
+          <ul class="flex flex-col space-y-16 items-center pb-4 pt-20">
+            <li>
+              <a href="index.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Home</a>
+            </li>
+            <li>
+              <a href="portfolio.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Portfolio</a>
+            </li>
+            <li>
+              <a href="powerhouse.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">Powerhouse</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:border-b-red-800 hover:border-solid hover:border-b-2 pb-2">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script>
+        // JavaScript to toggle mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+      
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
     <!-- portfolio section -->
-    <section >
+    <section class=" lg:px-52 px-4">
       
       <div class="text-center">
-        <h1 class="text-center text-5xl font-semibold inline-block  bg-gradient-to-r from-[#AF0000] from-20%  to-white to-60% bg-clip-text  text-transparent py-10 font-clash">
+        <h1 class="text-center lg:text-6xl text-4xl font-semibold inline-block  bg-gradient-to-r from-[#AF0000] from-20%  to-white to-60% bg-clip-text  text-transparent py-10 pt-16 font-clash">
         MAGIX SPELL PORTFOLIO
       </h1>
     </div>
-      <div class="grid grid-cols-4 gap-6 gap-y-10 p-4 px-52 delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
-        <div class="border-2 border-[#AF0000] p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Uber</h2>
-            <p>Print Media | Motion Graphics</p>
+  
+ 
+  
+
+  <!-- Modals -->
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg lg:p-6 p-3 max-w-[70%] w-full max-h-screen overflow-y-auto relative mt-44 ">
+      <!-- Force heading visibility with padding, z-index, and background -->
+      <h2 class="lg:text-4xl  font-semibold mb-8 text-start border-b-2 pb-2  bg-white relative pt-5 lg:px-14">Dockyard & Engineering Works Ltd.</h2>
+      
+      <div class="flex justify-between lg:mb-16 mb-6 lg:px-14 ">
+        <div>
+          <p class="lg:lg:text-sm text-[8px] text-gray-600">Price range</p>
+          <p class="font-bold lg:text-base text-[10px]">$1000-$2500</p>
         </div>
-        <div class="border-2 border-[#AF0000] p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-        <h2 class="text-lg font-bold">Ribana</h2>
-            <p>Digital Media Collaterals</p>
+        <div>
+          <p class="lg:text-sm text-[8px] text-gray-600">Project Duration</p>
+          <p class="font-bold lg:text-base text-[10px]">6+ months</p>
         </div>
-        <div class="border-2 border-[#AF0000] p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end" >
-            <h2 class="text-lg font-bold">Wildwoven</h2>
-            <p>Video Content | Cine Line</p>
+        <div class="text-right">
+          <p class="lg:text-sm text-[8px] text-gray-600">Industry</p>
+          <p class="font-bold lg:text-base text-[10px]">Transportation Services</p>
         </div>
-        <div class="border-2 border-[#AF0000] p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end" >
-            <h2 class="text-lg font-bold">The Fourth Gear</h2>
-            <p>Branding | Video Content | Cine Line</p>
+      </div>
+  
+      
+        <img src="Contents for Developer/Portfolio Sample/1.jpg" alt="Image 1" class="w-full h-auto object-cover">
+        <img src="Contents for Developer/Portfolio Sample/2.jpg" alt="Image 2" class="w-full h-auto object-cover">
+      
+  
+      <button class="absolute lg:top-5 lg:right-5 bg-gray-200 hover:bg-gray-400 text-gray-600 px-4 py-2 rounded-full focus:outline-none lg:text-lg close-modal top-1 right-1">X</button>
+    </div>
+  </div>
+  
+
+   <!-- Modal 2 -->
+   <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg lg:p-6 p-3 max-w-[70%] w-full max-h-screen overflow-y-auto relative mt-44 ">
+      <!-- Force heading visibility with padding, z-index, and background -->
+      <h2 class="lg:text-4xl  font-semibold mb-8 text-start border-b-2 pb-2  bg-white relative pt-5 lg:px-14">Dockyard & Engineering Works Ltd.</h2>
+      
+      <div class="flex justify-between lg:mb-16 mb-6 lg:px-14 ">
+        <div>
+          <p class="lg:lg:text-sm text-[8px] text-gray-600">Price range</p>
+          <p class="font-bold lg:text-base text-[10px]">$1000-$2500</p>
         </div>
-        <div class="border-2 border-[#AF0000] p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Gootipa</h2>
-            <p>Digital Media Collaterals | Print Media | Motion Graphics</p>
+        <div>
+          <p class="lg:text-sm text-[8px] text-gray-600">Project Duration</p>
+          <p class="font-bold lg:text-base text-[10px]">6+ months</p>
         </div>
-        <div class="border-2 border-[#AF0000] p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Risal Agro</h2>
-            <p>Branding</p>
+        <div class="text-right">
+          <p class="lg:text-sm text-[8px] text-gray-600">Industry</p>
+          <p class="font-bold lg:text-base text-[10px]">Transportation Services</p>
         </div>
-        <div class="border-2 border-[#AF0000]  p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Zaar</h2>
-            <p>Video Content</p>
+      </div>
+  
+      
+        <img src="Contents for Developer/Portfolio Sample/3.jpg" alt="Image 3" class="w-full h-auto object-cover">
+        <img src="Contents for Developer/Portfolio Sample/4.jpg" alt="Image 4" class="w-full h-auto object-cover">
+      
+  
+      <button class="absolute lg:top-5 lg:right-5 bg-gray-200 hover:bg-gray-400 text-gray-600 px-3 py-1 rounded-full focus:outline-none lg:text-3xl close-modal top-1 right-1">X</button>
+    </div>
+  </div>
+  <!-- Modal 3 -->
+  <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg lg:p-6 p-3 max-w-[70%] w-full max-h-screen overflow-y-auto relative mt-44 ">
+      <!-- Force heading visibility with padding, z-index, and background -->
+      <h2 class="lg:text-4xl  font-semibold mb-8 text-start border-b-2 pb-2  bg-white relative pt-5 lg:px-14">Dockyard & Engineering Works Ltd.</h2>
+      
+      <div class="flex justify-between lg:mb-16 mb-6 lg:px-14 ">
+        <div>
+          <p class="lg:lg:text-sm text-[8px] text-gray-600">Price range</p>
+          <p class="font-bold lg:text-base text-[10px]">$1000-$2500</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56  text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Dr. Noor</h2>
-            <p>Motion Graphics</p>
+        <div>
+          <p class="lg:text-sm text-[8px] text-gray-600">Project Duration</p>
+          <p class="font-bold lg:text-base text-[10px]">6+ months</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">The Bike World</h2>
-            <p>Branding</p>
+        <div class="text-right">
+          <p class="lg:text-sm text-[8px] text-gray-600">Industry</p>
+          <p class="font-bold lg:text-base text-[10px]">Transportation Services</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Fruitified</h2>
-            <p>Packaging Design</p>
+      </div>
+  
+      
+        <img src="Contents for Developer/Portfolio Sample/5.jpg" alt="Image 1" class="w-full h-auto object-cover">
+        <img src="Contents for Developer/Portfolio Sample/6.jpg" alt="Image 2" class="w-full h-auto object-cover">
+      
+  
+      <button class="absolute lg:top-5 lg:right-5 bg-gray-200 hover:bg-gray-400 text-gray-600 px-3 py-1 rounded-full focus:outline-none lg:text-3xl close-modal top-1 right-1">X</button>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg lg:p-6 p-3 max-w-[70%] w-full max-h-screen overflow-y-auto relative mt-44 ">
+      <!-- Force heading visibility with padding, z-index, and background -->
+      <h2 class="lg:text-4xl  font-semibold mb-8 text-start border-b-2 pb-2  bg-white relative pt-5 lg:px-14">Dockyard & Engineering Works Ltd.</h2>
+      
+      <div class="flex justify-between lg:mb-16 mb-6 lg:px-14 ">
+        <div>
+          <p class="lg:lg:text-sm text-[8px] text-gray-600">Price range</p>
+          <p class="font-bold lg:text-base text-[10px]">$1000-$2500</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Toyota GT86</h2>
-            <p>Lightroom Editing | Video Content | Cine Line</p>
+        <div>
+          <p class="lg:text-sm text-[8px] text-gray-600">Project Duration</p>
+          <p class="font-bold lg:text-base text-[10px]">6+ months</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">jobabdihi</h2>
-            <p>Web Design | Digital Media Collaterals</p>
+        <div class="text-right">
+          <p class="lg:text-sm text-[8px] text-gray-600">Industry</p>
+          <p class="font-bold lg:text-base text-[10px]">Transportation Services</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
+      </div>
+  
+      
+        <img src="Contents for Developer/Portfolio Sample/5.jpg" alt="Image 1" class="w-full h-auto object-cover">
+        <img src="Contents for Developer/Portfolio Sample/6.jpg" alt="Image 2" class="w-full h-auto object-cover">
+      
+  
+      <button class="absolute lg:top-5 lg:right-5 bg-gray-200 hover:bg-gray-400 text-gray-600 px-3 py-1 rounded-full focus:outline-none lg:text-3xl close-modal top-1 right-1">X</button>
+    </div>
+  </div>
+   <!-- Modal 29 -->
+   <div id="modal29" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg lg:p-6 p-3 max-w-[70%] w-full max-h-screen overflow-y-auto relative mt-44 ">
+      <!-- Force heading visibility with padding, z-index, and background -->
+      <h2 class="lg:text-4xl  font-semibold mb-8 text-start border-b-2 pb-2  bg-white relative pt-5 lg:px-14">Dockyard & Engineering Works Ltd.</h2>
+      
+      <div class="flex justify-between lg:mb-16 mb-6 lg:px-14 ">
+        <div>
+          <p class="lg:lg:text-sm text-[0.5rem] text-gray-600">Price range</p>
+          <p class="font-bold lg:text-base text-[10px]">$1000-$2500</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
+        <div>
+          <p class="lg:text-sm text-[0.5rem] text-gray-600">Project Duration</p>
+          <p class="font-bold lg:text-base text-[10px]">6+ months</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
+        <div class="text-right">
+          <p class="lg:text-sm text-[0.5rem] text-gray-600">Industry</p>
+          <p class="font-bold lg:text-base text-[10px]">Transportation Services</p>
         </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
-        <div class="border-2 border-[#AF0000]   p-4 w-64 h-56 text-white rounded-xl text-center flex flex-col justify-end">
-            <h2 class="text-lg font-bold">Joogbdjit</h2>
-            <p>Web Design | Digital Media Collaterals</p>
-        </div>
+      </div>
+  
+      
+        <img src="Contents for Developer/Portfolio Sample/7.jpg" alt="Image 1" class="w-full h-auto object-cover">
+        <img src="Contents for Developer/Portfolio Sample/8.jpg" alt="Image 2" class="w-full h-auto object-cover">
+      
+  
+      <button class="absolute lg:top-5 lg:right-5 bg-gray-200 hover:bg-gray-400 text-gray-600 px-3 py-1 rounded-full focus:outline-none lg:text-3xl close-modal top-1 right-1">X</button>
+    </div>
+  </div>
+   
+  <!-- Images container -->
+  <div class="grid lg:grid-cols-4 grid-cols-2 gap-6  mx-auto p-4 container">
+    <img src="Contents for Developer/portfolio thumbnails/berries-collection-brand-style-guides-logo-design-color-palate-fonts-and-typography-facebook-cover-photo-facebook-group.png" alt="Image 1" class="cursor-pointer" id="image1">
+        <img src="Contents for Developer/portfolio thumbnails/Bike-world-yamha-brand-identity-design-business-card-stationery-design-letterhead-mock-up-envelope-invoice.png" alt="Image 2" class="cursor-pointer" id="image2">
+        <img src="Contents for Developer/portfolio thumbnails/bmsc-tshirt-design-print-design-custom-design-custom-tshirt-design-custom-print-design.png" alt="Image 3" class="cursor-pointer" id="image3"> 
+        <img src="Contents for Developer/portfolio thumbnails/bonsai-pot-artist-logo-design-minalist-logo-design-simple-logo-design-brand-identity-design.png" alt="Image 3" class="cursor-pointer" id="image4">
+        <img src="Contents for Developer/portfolio thumbnails/Cake-indulgence-brand-identity-design-brand-style-guides-font-and-typography-color-palate-food-bakery-print-design-invoice.png" alt="image" class="cursor-pointer" id="image5">
+        <img src="Contents for Developer/portfolio thumbnails/Dockyard-&-Engineering-Works-Ltd-brochure-trifold-brochure-print-advertising-flyer-two-fold-brochure.png" alt="image" class="cursor-pointer" id="image6"> 
+        <img src="Contents for Developer/portfolio thumbnails/dr-noor-health-care-advisor-motion-graphic-video-animated-video-content-explainer-video-content-corporate-video-content.png" alt="image" class="cursor-pointer" id="image7">
+        <img src="Contents for Developer/portfolio thumbnails/E_llan-Boutique-Salon-promo-video-motion-graphics-cg-work-promotional-intro-video-coming-soon-video.png" alt="image" class="cursor-pointer" id="image8">
+        <img src="Contents for Developer/portfolio thumbnails/Fourth-Gear-Automotive-automobile-brand-identity-design-stationery-design-youtube video-car videos.png" alt="image9" class="cursor-pointer" id="image">
+        <img src="Contents for Developer/portfolio thumbnails/Fuitified-packagaing-and-label-design-tetrapack-design-juicpack-design-print-design-colorful-design-commercial-product-food.png" alt="image" class="cursor-pointer" id="image10">
+        <img src="Contents for Developer/portfolio thumbnails/grocery-guy-food-brand-style-guies-social-media-marketing-social-media-manager-facebook-ads-social-media-post.png" alt="image" class="cursor-pointer" id="image11">
+        <img src="Contents for Developer/portfolio thumbnails/i-am-the-naga-food-brand-style-guies-social-media-marketing-social-media-manager-facebook-ads-social-media-post.png" alt="image" class="cursor-pointer" id="image12">
+        <img src="Contents for Developer/portfolio thumbnails/Jobabdihi-News-portal-social-media-post-design-social-media-manager-social-media-marketer-static-images-static-post.png" alt="image" class="cursor-pointer" id="image13">
+        <img src="Contents for Developer/portfolio thumbnails/jumpstardbd-tech-brand-style-guies-social-media-marketing-social-media-manager-facebook-ads-social-media-post.png" alt="image" class="cursor-pointer" id="image14">
+        <img src="Contents for Developer/portfolio thumbnails/kabab-karbar-brand-identity-design-food-brand-style-guies-social-media-marketing-social-media-manager-facebook-ads.png" alt="image" class="cursor-pointer" id="image15">
+        <img src="Contents for Developer/portfolio thumbnails/Lawford-Capital-logo-design-law-company-brand-identity-design-professional logo design-creative logo design-unique logo design.png" alt="image" class="cursor-pointer" id="image16">
+        <img src="Contents for Developer/portfolio thumbnails/mostofa-door-wooden-door-door-manufacturer-furniture-manufacture-social-media-post-social-media-creatives-static-post-ads-campaign.png" alt="image" class="cursor-pointer" id="image17">
+        <img src="Contents for Developer/portfolio thumbnails/podcast-commercial-ads-social-media-ads-shorts-reels-tiktok-drop-shipping-vidoes-vlogs-youtube-videos-motion-graphics.png" alt="image" class="cursor-pointer" id="image18">
+      
+        <img src="Contents for Developer/portfolio thumbnails/qinetic-network-thumbnail-design-image-editing-youtube-poster-design-banner-design-music-video-thumbnails-spotify.png" alt="image" class="cursor-pointer" id="image19">
+        <img src="Contents for Developer/portfolio thumbnails/Quick Printing-spot graphics-vehicle banner-marketing services-print advertising-poster awareness design-poster design-vehicle banner.png" alt="image" class="cursor-pointer" id="image20">
+        <img src="Contents for Developer/portfolio thumbnails/ramen-bhai-food-brand-style-guies-social-media-marketing-social-media-manager-facebook-ads-social-media-post.png" alt="image" class="cursor-pointer" id="image21">
+        <img src="Contents for Developer/portfolio thumbnails/Red-Balloon-Production-brand-identity-design-business-card-stationery-design-letterhead-mock-up-envelope-invoice.png" alt="image" class="cursor-pointer" id="image22">
+        <img src="Contents for Developer/portfolio thumbnails/ribana-social-media-post-social-media-marketing-social-media-manager-facebook-ads-ads-campaign-website.png" alt="image" class="cursor-pointer" id="image23">
+       
+        <img src="Contents for Developer/portfolio thumbnails/samero-apparels-logo-design-minalist-logo-design-simple-logo-design-brand-identity-design.png" alt="image" class="cursor-pointer" id="image24">
+        <img src="Contents for Developer/portfolio thumbnails/studio-lkg-Logo-animation-services-Animated-logo-design-logo-intro-animation-motion-logo-design-custom-logo-animation.png" alt="image" class="cursor-pointer" id="image25">
+        <img src="Contents for Developer/portfolio thumbnails/Superfit-brand-style-guides-packaging-and-label-design-ghee-label-design-oil-container-label-design-masala-packet-label-design.png" alt="image" class="cursor-pointer" id="image26">
+        <img src="Contents for Developer/portfolio thumbnails/toyota-gt86-automobile-automotive-cars-sports-car-twin-turbo-sparco-nitro-nismo-rocket-bunny-video-editing-reels-image-editing.png" alt="image" class="cursor-pointer" id="image27">
+        <img src="Contents for Developer/portfolio thumbnails/Uber-print-advertising-motion-graphics-leaflet-design-brochure-design-flyer-design-two-fold-brochure-trifold-brochure.png" alt="image" class="cursor-pointer" id="image28">
+        <img src="Contents for Developer/portfolio thumbnails/Zaar-video-content-social-media-video-video-ads-reels-instagram-reels-shorts-leather-industry-womens-wear-shoes.png" alt="image" class="cursor-pointer" id="image29">
+        
+
+       
+  </div>
         
 
     
-    </section>
-    <!-- Footer Section -->
-    <footer class="lg:px-52  pt-8 lg:py-3 bg-gradient-to-b from-black from-30%  to-red-950">
-
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-                <h2 class="lg:text-3xl text-xl font-clash font-light pt-12 text-white"><span class="font-semibold">ADOX</span> STUDIO</h2>
-  
-            </div>
-            <div class="text-center">
-                <h3 class="lg:text-lg  mb-2">Get in Touch</h3>
-                <div class="flex justify-center lg:space-x-12 space-x-3">
-                    <!-- Social Media Icons -->
-                    <a href="#" class="text-2xl   hover:-translate-y-4 duration-300">
-                        <img src="Contents for Developer/Footer/icon-fb.png" alt="">
-                    </a>
-                    <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                        <img src="Contents for Developer/Footer/icon-insta.png" alt="">
-                    </a>
-                    <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                        <img src="Contents for Developer/Footer/icon-behance.png" alt="">
-                    </a>
-                    <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                        <img src="Contents for Developer/Footer/icon-linkedin.png" alt="">
-                    </a>
-                    <a href="#" class="text-2xl  hover:-translate-y-4 duration-300">
-                        <img src="Contents for Developer/Footer/icon-twitter.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="text-right hidden lg:block pt-4">
-                <h3 class="text-lg  mb-2">Connect <span class="text-[#AF0000]">Faster</span></h3>
-                <div class="flex items-center justify-end">
-                    <p class="text-white  mr-2">+880 18 4281 3849</p>
-                    <img src="Contents for Developer/Footer/icon-phone.png" alt="">
-                </div>
-                <div class="flex items-center justify-end mt-2">
-                    <p class="text-white  m mr-2">adoxstudio@gmail.com</p>
-                    <img src="Contents for Developer/Footer/icon-mail.png" alt="">
-                </div>
-            </div>
-           <br> 
-           </div>
-        <div class="text-center lg:mt-5 text-xs lg:text-sm px-5">
-            <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000]  to-white bg-clip-text text-transparent ">
-                Giving Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
-            </p>
+  </section>
+    
+  <!-- Footer Section -->
+  <footer class="lg:px-52 lg:pt-8 pt-4 lg:py-3 bg-gradient-to-b from-black from-30% to-red-950">
+    <div class="container mx-auto flex lg:flex-row flex-col-reverse md:flex-row justify-between items-center w-full">
+      <!-- Logo Section -->
+      <div class=" lg:mb-4 md:mb-0 lg:pt-10">
+        <a href="index.html">
+          <img src="Contents for Developer/Extras/Adox-Studio-Logo.png" alt="Adox Studio Logo" class="lg:w-[15rem] w-[60%] mx-auto">
+        </a>
+      </div>
+      
+      <!-- Get in touch and Social Media Icons -->
+      <div class="text-center flex flex-col justify-center w-full">
+        <h3 class="lg:text-lg lg:mb-5 mb-2 text-white">Get in Touch</h3>
+        <div class="flex justify-center lg:space-x-12 ">
+          <!-- Social Media Icons -->
+          <a href="https://www.facebook.com/adoxstudio" target="_blank" class="text-2xl hover:-translate-y-[10px] duration-300">
+            <img src="Contents for Developer/Footer/icon-fb.png" alt="Facebook" class="w-[70%] lg:w-full">
+          </a>
+          <a href="https://www.instagram.com/adox.studio/" target="_blank" class="text-2xl hover:-translate-y-[10px] duration-300">
+            <img src="Contents for Developer/Footer/icon-insta.png" alt="Instagram" class="w-[70%] lg:w-full">
+          </a>
+          <a href="https://www.behance.net/sadmanislam4" target="_blank" class="text-2xl hover:-translate-y-[10px] duration-300">
+            <img src="Contents for Developer/Footer/icon-behance.png" alt="Behance" class="w-[70%] lg:w-full">
+          </a>
+          <a href=" https://www.linkedin.com/in/mohammed-sadman-sakib-bin-islam-45b006209/" target="_blank" class="text-2xl hover:-translate-y-[10px] duration-300">
+            <img src="Contents for Developer/Footer/icon-linkedin.png" alt="LinkedIn" class="w-[70%] lg:w-full">
+          </a> 
+          <a href="https://www.fiverr.com/sadmanprince" target="_blank" class="text-2xl hover:-translate-y-[10px] duration-300">
+            <img src="Contents for Developer/Extras/icon-fiverr.png" alt="Fiverr" class="w-[70%] lg:w-full">
+          </a>
         </div>
-      </footer>
+      </div>
+      
+      <!-- Connect Faster Column (Right Aligned, No Margin) -->
+      <div class="lg:w-auto text-right lg:ml-auto hidden lg:block pt-4">
+        <h3 class="text-lg mb-4 text-white">Connect <span class="text-[#AF0000]">Faster</span></h3>
+        <div class="flex items-center justify-end">
+          <p class="text-white mr-2">+880 18 4281 3849</p>
+          <img src="Contents for Developer/Footer/icon-phone.png" alt="Phone Icon">
+        </div>
+        <div class="flex items-center justify-end mt-2">
+          <p class="text-white mr-2">adoxstudio@gmail.com</p>
+          <img src="Contents for Developer/Footer/icon-mail.png" alt="Mail Icon">
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright Section -->
+    <div class="text-center lg:mt-5 text-xs lg:text-sm px-5 py-3 lg:py-0">
+      <p class="text-center inline-block bg-gradient-to-r from-white via-[#AF0000] to-white bg-clip-text text-transparent">
+        Giving in Life to your Vision | All Rights Reserved by Mohammed Sadman Sakib Bin Islam | 2024
+      </p>
+    </div>
+  </footer>
+  
     
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    <script src="portfolio.js"></script>
   </body>
 </html>

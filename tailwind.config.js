@@ -17,7 +17,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('taos/plugin')
+    require('taos/plugin'),
+    require('daisyui'),
   ],
   
 };

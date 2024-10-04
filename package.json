@@ -2,7 +2,8 @@
   "dependencies": {
     "tailwindcss-animated": "^1.1.2",
     "taos": "^1.0.5"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.11"
   }
 }
-
-
